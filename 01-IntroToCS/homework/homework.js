@@ -2,17 +2,14 @@
 
 function BinarioADecimal(num) {
   // tu codigo aca
-  let data = num.split('').reverse();
-  var result = 0;
-for (let i = 0; i < data.length; i++) {
-  result += 2 ** i * data[i];  
+  let result = 0;
+  let numero = num.split('').reverse();
+for (let i = 0; i < numero.length; i++) {
+  result +=  numero[i] * 2 ** i;
+  // result +=  numero[i] * Math.pow(2,i);
 }
 return result;
-
 }
-
-
-
 function DecimalABinario(num) {
   // tu codigo aca
 var binary = ""
@@ -22,8 +19,6 @@ while (num>0){
 }
 return binary
 }
-
-
 
 module.exports = {
   BinarioADecimal,
